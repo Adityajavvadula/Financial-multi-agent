@@ -1,0 +1,10 @@
+# Initial backend dependency list.
+# Pin tested versions after the team creates and verifies the environment.
+fastapi
+uvicorn[standard]
+python-multipart
+pymupdf
+chromadb
+sentence-transformers
+python-dotenv
+pydantic
