@@ -1,48 +1,258 @@
-# Research Protocol — Working Draft
+# Research Design and Evaluation Protocol
 
-**Status:** Draft for discussion with the project guide. No experimental results or approved numeric targets are claimed.
+# 
 
-## Working research questions
+# Project: Multi-Agent Financial Research System
 
-- **RQ1 — Metric extraction:** How accurately can the system extract selected financial metrics and ratios from uploaded financial reports?
-- **RQ2 — Red-flag detection:** How effectively can the system identify potential financial warning signs and provide supporting evidence?
-- **RQ3 — Grounded question answering:** Can the Research Agent answer multi-part questions using relevant passages and accurate source citations?
-- **RQ4 — Multi-agent workflow:** Does dividing tasks among specialised agents improve completeness and traceability compared with a simpler single-step workflow?
+# Batch: CSM-B12
 
-## Proposed evaluation measures
+# Guide: Mr M. Anil Kumar
 
-| Area | Proposed measure | How it may be checked |
-|---|---|---|
-| Metric extraction | Extraction accuracy | Compare extracted values with manually verified reference values. |
-| Citations | Citation accuracy | Check whether each cited page/passage supports its claim. |
-| Red flags | Precision and recall | Compare detected flags with a manually reviewed labelled reference set. |
-| Answer generation | Faithfulness | Check whether answer claims are supported by retrieved context. |
-| Retrieval | Retrieval relevance/context precision | Review whether retrieved chunks contain evidence needed for the question. |
-| System | Response time and completion rate | Record runtime and successful/failed task executions. |
+# 
 
-## Baselines to discuss
+# 1\. Research Objective
 
-- Manual analysis of the same financial document/questions.
-- A general-purpose language model answering without retrieval.
-- A retrieval-based workflow without multi-agent orchestration, if feasible.
+# 
 
-## Dataset and benchmark
+# The objective of this project is to develop a multi-agent AI system that analyses financial documents, extracts important financial information, identifies potential risks, compares financial performance and answers user questions with supporting document citations.
 
-FinanceBench is a possible benchmark resource to study. The team must review its licensing, access requirements, dataset format and evaluation protocol before deciding whether and how to use it.
+# 
 
-## Protocol decisions still required
+# 2\. Research Questions
 
-- Which reports and questions will form the evaluation set?
-- Which metrics and formulas will be used for each task?
-- How many samples will be manually verified?
-- What constitutes a correct citation?
-- How will red-flag labels be created and reviewed?
-- What baseline systems will be implemented?
-- What numeric targets are realistic and approved by the guide?
+# 
 
-## Reporting safeguards
+# RQ1: How accurately can the system extract financial metrics from financial reports?
 
-- Separate proposed targets from measured results.
-- Do not claim accuracy values until experiments have been run.
-- Keep source document/page references for evaluated examples.
-- Record failed cases and limitations, not only successful examples.
+# 
+
+# RQ2: How effectively can the system identify potential financial red flags?
+
+# 
+
+# RQ3: How accurately can the system answer financial questions with supporting citations?
+
+# 
+
+# RQ4: Does a multi-agent RAG system perform better than a general-purpose LLM without document retrieval?
+
+# 
+
+# 3\. Evaluation Metrics and Proposed Targets
+
+# 
+
+# Metric
+
+# 
+
+# Definition
+
+# 
+
+# Proposed target
+
+# 
+
+# Extraction Accuracy
+
+# 
+
+# Correctly extracted values / Total evaluated values × 100
+
+# 
+
+# ≥ 90%
+
+# 
+
+# Citation Accuracy
+
+# 
+
+# Supported citations / Total citations evaluated × 100
+
+# 
+
+# ≥ 90%
+
+# 
+
+# Red-Flag Precision
+
+# 
+
+# TP / (TP + FP)
+
+# 
+
+# ≥ 80%
+
+# 
+
+# Red-Flag Recall
+
+# 
+
+# TP / (TP + FN)
+
+# 
+
+# ≥ 75%
+
+# 
+
+# Retrieval Relevance
+
+# 
+
+# Relevant retrieved chunks / Total retrieved chunks evaluated × 100
+
+# 
+
+# ≥ 80%
+
+# 
+
+# Note: These are initial research targets and must be reviewed and approved by the project guide.
+
+# 
+
+# 4\. Dataset
+
+# 
+
+# The project will use publicly available financial reports and the FinanceBench benchmark for financial question-answering evaluation.
+
+# 
+
+# The evaluation documents will include annual reports and financial statements.
+
+# 
+
+# Reference answers and supporting evidence will be used to assess the correctness of system outputs.
+
+# 
+
+# 5\. Baseline Methods
+
+# 
+
+# The proposed system will be compared against:
+
+# 
+
+# Manual Reading: A person reads financial reports and answers selected questions.
+
+# 
+
+# General-Purpose LLM: An LLM answers questions without retrieving evidence from the uploaded documents.
+
+# 
+
+# Proposed Multi-Agent RAG System: Specialised agents retrieve relevant document sections, extract information and generate answers with citations.
+
+# 
+
+# 6\. Experimental Procedure
+
+# 
+
+# Collect financial reports and benchmark questions.
+
+# 
+
+# Extract text from the documents.
+
+# 
+
+# Divide documents into smaller chunks.
+
+# 
+
+# Generate embeddings and store them in a vector database.
+
+# 
+
+# Retrieve relevant document sections for each question.
+
+# 
+
+# Extract financial metrics and identify potential red flags.
+
+# 
+
+# Generate answers with source citations.
+
+# 
+
+# Compare the results with reference answers.
+
+# 
+
+# Calculate evaluation metrics.
+
+# 
+
+# Record observations and limitations.
+
+# 
+
+# 7\. Evaluation Plan
+
+# 
+
+# The initial pilot evaluation will use:
+
+# 
+
+# 50 financial question-answering examples.
+
+# 
+
+# 100 manually verified financial metric values.
+
+# 
+
+# A manually reviewed and labelled set of financial risk examples.
+
+# 
+
+# The final evaluation sample sizes will be decided after reviewing dataset availability and guide feedback.
+
+# 
+
+# 8\. Expected Outcomes
+
+# 
+
+# Accurate extraction of financial information.
+
+# 
+
+# Identification of potential financial warning signs.
+
+# 
+
+# Answers supported by financial document evidence.
+
+# 
+
+# Reduced manual research effort.
+
+# 
+
+# Improved transparency and traceability of financial analysis.
+
+# 
+
+# 9\. Current Status
+
+# 
+
+# Research design and evaluation metrics are being prepared. Dataset selection, baseline implementation and experimental evaluation are pending.
+
+# 
+
+# No experimental results or performance claims have been established yet.
+
